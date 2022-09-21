@@ -10,6 +10,6 @@ func Sum(a int, b int) int {
     return a + b
 }
 
-func Multi(a int, b int) float64 {
+func Multi(a int, b int) int {
     return a * b
 }
