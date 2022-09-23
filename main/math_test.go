@@ -11,7 +11,7 @@ func TestSum(t *testing.T){
 }
 
 func TestMulti(t *testing.T){
-    total := Multi(10, 15)
+    total := Multi(10, 16)
 
     if total != 150 {
 	    t.Errorf("Resultado da soma é inválido: Resultado %d. Esperado %d", total, 150)
