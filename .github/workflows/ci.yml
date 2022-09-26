@@ -17,7 +17,7 @@ jobs:
         with:
           go-version: 1.15
 
-      - run: go test ./go
+      - run: go test -coverprofile=./go/coverage.out ./go
       - run: go run ./go/math.go
       
       - name: Set up QEMU
@@ -30,6 +30,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          context: .
+          file: docker/Dockerfile
           push: false
           tags: gomescarlosdev/goapp-math:latest
          
