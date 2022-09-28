@@ -34,6 +34,12 @@ jobs:
           file: docker/Dockerfile
           push: false
           tags: gomescarlosdev/goapp-math:latest
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
          
 #      - name: Login to DockerHub
 #      - uses: docker/login-action@v2
