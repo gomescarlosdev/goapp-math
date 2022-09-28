@@ -3,6 +3,7 @@ package main
 import "testing"
 
 func TestSum(t *testing.T) {
+	
 	total := Sum(15, 15)
 
 	if total != 30 {
@@ -11,6 +12,7 @@ func TestSum(t *testing.T) {
 }
 
 func TestMulti(t *testing.T) {
+	
 	total := Multi(10, 15)
 
 	if total != 150 {
